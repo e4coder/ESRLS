@@ -22,3 +22,14 @@ body {
 .windowSection .windowHeader .windowTitle {
   font-size: 12px;
 }
+
+.primaryButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+.primaryButton {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: inline-block;
+  color: white;
+}

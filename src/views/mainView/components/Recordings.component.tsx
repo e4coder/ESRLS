@@ -4,7 +4,7 @@ export default function Recordings() {
   return (
     <div className="windowSection">
       <div className="windowHeader">
-        <div className="windowTitle">Preview Window</div>
+        <div className="windowTitle">Recordings</div>
       </div>
       <div className="windowContent">
         <h1>Content</h1>

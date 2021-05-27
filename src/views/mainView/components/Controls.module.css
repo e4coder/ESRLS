@@ -1,0 +1,45 @@
+.ControlsContent {
+  display: flex;
+  margin-top: 20px;
+}
+
+.ControlsContent .streamSection {
+  flex: 1 1 50%;
+}
+
+.ControlsContent .recordSection {
+  flex: 1 1 50%;
+}
+
+.ControlsContent .recordSection .seperatorLine {
+  border-left: 2px solid #6f2232;
+  width: 10px;
+  height: 350px;
+}
+
+.ControlsButton {
+  border: 1px solid #c3073f;
+  float: right;
+  margin-right: 10px;
+  box-sizing: border-box;
+  height: 28px;
+  width: 80px;
+}
+
+.ControlsButton:hover {
+  cursor: pointer;
+}
+
+.ControlsContent .recordSection .recordButton {
+  /* border: 1px solid #C3073F;
+  float: right;
+  margin-right: 10px; */
+}
+
+.ControlsContent .recordSection .recordButton:hover {
+  background-color: #361424;
+}
+
+.ControlsContent .recordSection .activeButton {
+  background-color: #c3073f;
+}
