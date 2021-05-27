@@ -1,0 +1,41 @@
+.mainView {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  height: 98vh;
+  color: white;
+}
+
+.mainView div {
+  box-sizing: border-box;
+}
+
+.mainView .leftSection {
+  flex: 1 1 70%;
+}
+
+.mainView .leftSection .VideoPreviewContainer {
+  height: 60vh;
+  background-color: #1a1a1d;
+}
+
+.mainView .leftSection .ControlsContainer {
+  height: 38vh;
+  background-color: #1a1a1d;
+  margin-top: 10px;
+}
+
+.mainView .rightSection {
+  flex: 1 1 30%;
+}
+
+.mainView .rightSection .ScreensContainer {
+  height: 30vh;
+  background-color: #1a1a1d;
+}
+
+.mainView .rightSection .RecordingsContainer {
+  height: 68vh;
+  background-color: #1a1a1d;
+  margin-top: 10px;
+}
