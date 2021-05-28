@@ -33,3 +33,16 @@ body {
   display: inline-block;
   color: white;
 }
+
+.primaryInput:focus {
+  outline: none;
+}
+
+.primaryInput {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: inline-block;
+  color: white;
+  border: 1px solid #4e4e50;
+  height: 28px;
+}

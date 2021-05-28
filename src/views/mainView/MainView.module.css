@@ -15,12 +15,12 @@
 }
 
 .mainView .leftSection .VideoPreviewContainer {
-  height: 60vh;
+  height: 70vh;
   background-color: #1a1a1d;
 }
 
 .mainView .leftSection .ControlsContainer {
-  height: 38vh;
+  height: 28vh;
   background-color: #1a1a1d;
   margin-top: 10px;
 }
