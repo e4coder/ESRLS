@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
-import { desktopCapturer } from 'electron';
+import React from 'react';
 
+import VideoPlayer from './miniComponents/VideoPlayer.component';
 import Styles from './VideoPreview.module.css';
 
 export default function VideoPreview() {
-  useEffect(() => {
-    // handle source
-  }, []);
-
   return (
     <div className="windowSection">
       <div className="windowHeader">
@@ -15,7 +11,8 @@ export default function VideoPreview() {
       </div>
       <div className={`windowContent ${Styles.test}`}>
         <div className="videoContainer">
-          <h1>Content</h1>
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <VideoPlayer />
         </div>
       </div>
     </div>

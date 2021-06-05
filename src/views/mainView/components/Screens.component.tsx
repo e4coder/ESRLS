@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { desktopCapturer, DesktopCapturerSource, Size } from 'electron';
 
+import { useStoreState, useStoreActions } from '../../../state/hooks';
+
 import Styles from './Screens.module.css';
 
 export default function Screens() {
-  const [Sources, setSources] = useState<DesktopCapturerSource[]>();
+  const Sources = useStoreState((state) => state.ScreenModel.sources);
+  const setSources = useStoreActions(
+    (actions) => actions.ScreenModel.setSources
+  );
+  // const [Sources, setSources] = useState<DesktopCapturerSource[]>();
 
   useEffect(() => {
     const getSources = async () => {
@@ -14,7 +20,7 @@ export default function Screens() {
         fetchWindowIcons: true,
         thumbnailSize,
       });
-      setSources([...res]);
+      setSources(res);
     };
     getSources();
   }, []);
