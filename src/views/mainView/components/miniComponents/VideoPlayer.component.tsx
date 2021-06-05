@@ -22,7 +22,7 @@ export default function VideoPlayer() {
       videos.play();
     };
     getStream();
-  });
+  }, [Sources]);
   // eslint-disable-next-line jsx-a11y/media-has-caption
   return (
     <div
