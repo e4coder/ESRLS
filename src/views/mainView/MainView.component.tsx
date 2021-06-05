@@ -18,7 +18,7 @@ export default function MainView() {
         <div className={`${Styles.VideoPreviewContainer}`}>
           <VideoPreview />
         </div>
-        <div className={`${Styles.ControlsContainer}`}>
+        <div className={`${Styles.ControlsContainer}`} id="style-7">
           <Controls />
         </div>
       </div>

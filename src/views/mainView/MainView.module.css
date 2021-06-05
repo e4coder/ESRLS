@@ -20,7 +20,7 @@
 }
 
 .mainView .leftSection .ControlsContainer {
-  height: 28vh;
+  height: 27vh;
   background-color: #1a1a1d;
   margin-top: 10px;
 }
@@ -31,11 +31,12 @@
 
 .mainView .rightSection .ScreensContainer {
   height: 30vh;
+  overflow-y: auto;
   background-color: #1a1a1d;
 }
 
 .mainView .rightSection .RecordingsContainer {
-  height: 68vh;
+  height: 67vh;
   background-color: #1a1a1d;
   margin-top: 10px;
 }

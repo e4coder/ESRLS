@@ -8,6 +8,23 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1f2833;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
+}
+
 .windowSection {
 }
 
@@ -45,4 +62,40 @@ body {
   color: white;
   border: 1px solid #4e4e50;
   height: 28px;
+}
+
+.card {
+  display: inline-block;
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  max-height: 150px;
+  max-width: 150px;
+  min-height: 150px;
+  min-width: 150px;
+}
+
+.card:hover {
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card div img {
+  max-width: 100%;
+  height: 100px;
+  width: auto;
+}
+.card p {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 130px;
 }

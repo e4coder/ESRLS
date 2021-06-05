@@ -1,0 +1,8 @@
+.screensContainer {
+  box-sizing: border-box;
+  gap: 10px;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

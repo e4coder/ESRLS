@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { desktopCapturer, DesktopCapturerSource, Size } from 'electron';
 
+import Styles from './Screens.module.css';
+
 export default function Screens() {
   const [Sources, setSources] = useState<DesktopCapturerSource[]>();
 
@@ -22,10 +24,20 @@ export default function Screens() {
       <div className="windowHeader">
         <div className="windowTitle">Screens</div>
       </div>
-      <div className="windowContent">
-        <div>
+      <div className={`${Styles.windowContent}`}>
+        <div className={`${Styles.screensContainer}`}>
           {Sources?.map((source) => (
-            <div key={source.id}>{source.name}</div>
+            <div className="card" key={source.id}>
+              <div>
+                <img
+                  alt="Thumbnail"
+                  src={`data:image/png;base64,${source.thumbnail
+                    .toPNG()
+                    .toString('base64')}`}
+                />
+              </div>
+              <p>{source.name}</p>
+            </div>
           ))}
         </div>
       </div>
