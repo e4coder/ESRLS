@@ -8,12 +8,14 @@ import VideoPreview from './components/VIdeoPreview.component';
 import Screens from './components/Screens.component';
 import Controls from './components/Controls.component';
 import Recordings from './components/Recordings.component';
+import SourceLoader from '../../HelperComponents/sourceloader';
 
 export default function MainView() {
   // const test = useStoreState((state) => state.Test);
 
   return (
     <div className={`${Styles.mainView}`}>
+      <SourceLoader />
       <div className={`${Styles.leftSection}`}>
         <div className={`${Styles.VideoPreviewContainer}`}>
           <VideoPreview />

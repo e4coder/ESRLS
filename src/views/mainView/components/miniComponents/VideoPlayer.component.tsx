@@ -5,23 +5,25 @@ export default function VideoPlayer() {
   const Sources = useStoreState((state) => state.ScreenModel.sources);
 
   useEffect(() => {
-    const getStream = async () => {
-      const constraints = {
-        audio: false,
-        video: {
-          mandatory: {
-            chromeMediaSource: 'desktop',
-            chromeMediaSourceId: Sources[0].id,
+    if (Sources.length > 0) {
+      const getStream = async () => {
+        const constraints = {
+          audio: false,
+          video: {
+            mandatory: {
+              chromeMediaSource: 'desktop',
+              chromeMediaSourceId: Sources[0].id,
+            },
           },
-        },
-      };
+        };
 
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
-      const videos = document.querySelector('.videos');
-      videos.srcObject = stream;
-      videos.play();
-    };
-    getStream();
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        const videos = document.querySelector('.videos');
+        videos.srcObject = stream;
+        videos.play();
+      };
+      getStream();
+    }
   }, [Sources]);
   // eslint-disable-next-line jsx-a11y/media-has-caption
   return (
