@@ -3,6 +3,7 @@ import { useStoreState } from '../../../../state/hooks';
 
 export default function VideoPlayer() {
   const Sources = useStoreState((state) => state.ScreenModel.sources);
+  const ActiveSource = useStoreState((state) => state.ScreenModel.activeSource);
 
   useEffect(() => {
     if (Sources.length > 0) {
@@ -12,7 +13,7 @@ export default function VideoPlayer() {
           video: {
             mandatory: {
               chromeMediaSource: 'desktop',
-              chromeMediaSourceId: Sources[0].id,
+              chromeMediaSourceId: ActiveSource,
             },
           },
         };
@@ -24,7 +25,7 @@ export default function VideoPlayer() {
       };
       getStream();
     }
-  }, [Sources]);
+  }, [Sources, ActiveSource]);
   // eslint-disable-next-line jsx-a11y/media-has-caption
   return (
     <div
