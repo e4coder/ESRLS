@@ -20,7 +20,7 @@ export default function Screens() {
     const getSources = async () => {
       const thumbnailSize: Size = { height: 480, width: 720 };
       const res: DesktopCapturerSource[] = await desktopCapturer.getSources({
-        types: ['screen'],
+        types: ['screen', 'window'],
         fetchWindowIcons: true,
         thumbnailSize,
       });
